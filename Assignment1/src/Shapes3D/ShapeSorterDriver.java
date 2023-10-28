@@ -65,37 +65,50 @@ public class ShapeSorterDriver {
 
 	private static Shape3D[] loadShapesFromFile(String fileName) {
 		Shape3D[] shapes = null;
+
 		try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
-			int numShapes = Integer.parseInt(reader.readLine().trim());
+			String line = reader.readLine();
+			String[] parts = line.split(" ");
+
+			if (parts.length % 3 != 1) {
+				// Handle the case where the format is incorrect.
+				// You can throw an exception, print an error message, or take other appropriate
+				// action.
+				return null;
+			}
+
+			int numShapes = Integer.parseInt(parts[0]);
 			shapes = new Shape3D[numShapes];
 
 			for (int i = 0; i < numShapes; i++) {
-				String[] parts = reader.readLine().split(" ");
-				String shapeType = parts[0];
-				double height = Double.parseDouble(parts[1]);
-				double otherParam = Double.parseDouble(parts[2]);
+				int startIndex = i * 3 + 1;
 
+				String shapeType = parts[startIndex];
+				double param1 = Double.parseDouble(parts[startIndex + 1]);
+				double param2 = Double.parseDouble(parts[startIndex + 2]);
+
+				// Create the corresponding Shape3D object based on the shape type.
 				switch (shapeType) {
 				case "Cylinder":
-					shapes[i] = new Cylinder(height, otherParam);
+					shapes[i] = new Cylinder(param1, param2);
 					break;
 				case "Cone":
-					shapes[i] = new Cone(height, otherParam);
+					shapes[i] = new Cone(param1, param2);
 					break;
 				case "Pyramid":
-					shapes[i] = new Pyramid(height, otherParam);
+					shapes[i] = new Pyramid(param1, param2);
 					break;
 				case "SquarePrism":
-					shapes[i] = new SquarePrism(height, otherParam);
+					shapes[i] = new SquarePrism(param1, param2);
 					break;
 				case "TriangularPrism":
-					shapes[i] = new TriangularPrism(height, otherParam);
+					shapes[i] = new TriangularPrism(param1, param2);
 					break;
 				case "PentagonalPrism":
-					shapes[i] = new PentagonalPrism(height, otherParam);
+					shapes[i] = new PentagonalPrism(param1, param2);
 					break;
 				case "OctagonalPrism":
-					shapes[i] = new OctagonalPrism(height, otherParam);
+					shapes[i] = new OctagonalPrism(param1, param2);
 					break;
 				default:
 					// Handle the case where the shapeType is not recognized.
@@ -103,12 +116,12 @@ public class ShapeSorterDriver {
 					// action.
 					break;
 				}
-
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;
 		}
+
 		return shapes;
 	}
 
