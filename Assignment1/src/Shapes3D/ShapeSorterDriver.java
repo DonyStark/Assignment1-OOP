@@ -8,6 +8,8 @@ import java.io.IOException;
 public class ShapeSorterDriver {
 
 	public static void main(String[] args) throws IOException {
+		long startTime = System.currentTimeMillis();// record end time
+		
 		if (args.length < 3) {
 			displayUsage();
 			return;
@@ -66,8 +68,11 @@ public class ShapeSorterDriver {
 			displayUsage();
 			return;
 		}
+		long endTime = System.currentTimeMillis();// record end time
+		Long elapsedTime = endTime - startTime;
 
 		displaySortedShapes(shapes);
+		System.out.println("Sorting time: " + elapsedTime + " milliseconds");
 	}
 
 	private static void displayUsage() {
