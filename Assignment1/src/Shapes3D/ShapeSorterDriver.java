@@ -9,8 +9,8 @@ public class ShapeSorterDriver {
 
 	public static void main(String[] args) throws IOException {
 		long startTime = System.currentTimeMillis();// record end time
-		
-		if (args.length < 3) {
+
+		if (args.length != 3) {
 			displayUsage();
 			return;
 		}
@@ -64,7 +64,7 @@ public class ShapeSorterDriver {
 		case "q":
 			SortingUtility.quickSort(shapes, comparator);
 			break;
-		case "r": 
+		case "r":
 			SortingUtility.radixSort(shapes, comparator);
 		default:
 			displayUsage();
@@ -85,25 +85,25 @@ public class ShapeSorterDriver {
 		System.out.println("Sorted Shapes:");
 		Shape3D firstSortedValue = null;
 		Shape3D lastSortedValue = null;
-		
-		 for (int i = 0; i < shapes.length; i++) {
-		        System.out.println(shapes[i]);
 
-		        // Store the first and last sorted values
-		        if (i == 0) {
-		            firstSortedValue = shapes[i];
-		        }
-		        if (i == shapes.length - 1) {
-		            lastSortedValue = shapes[i];
-		        }
-		    }
-		 System.out.println("First sorted value: " + firstSortedValue);
-		 System.out.println("Last sorted value: " + lastSortedValue);
-		 
-		 // Print every thousandth value in between
-		 for (int i = 0; i < shapes.length; i += 1000) {
-		        System.out.println("Value at index " + i + ": " + shapes[i]);
-		 }
+		for (int i = 0; i < shapes.length; i++) {
+			System.out.println(shapes[i]);
+
+			// Store the first and last sorted values
+			if (i == 0) {
+				firstSortedValue = shapes[i];
+			}
+			if (i == shapes.length - 1) {
+				lastSortedValue = shapes[i];
+			}
+		}
+		System.out.println("First sorted value: " + firstSortedValue);
+		System.out.println("Last sorted value: " + lastSortedValue);
+
+		// Print every thousandth value in between
+		for (int i = 0; i < shapes.length; i += 1000) {
+			System.out.println("Value at index " + i + ": " + shapes[i]);
+		}
 
 	}
 
