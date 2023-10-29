@@ -81,9 +81,28 @@ public class ShapeSorterDriver {
 
 	private static void displaySortedShapes(Shape3D[] shapes) {
 		System.out.println("Sorted Shapes:");
-		for (Shape3D shape : shapes) {
-			System.out.println(shape);
-		}
+		Shape3D firstSortedValue = null;
+		Shape3D lastSortedValue = null;
+		
+		 for (int i = 0; i < shapes.length; i++) {
+		        System.out.println(shapes[i]);
+
+		        // Store the first and last sorted values
+		        if (i == 0) {
+		            firstSortedValue = shapes[i];
+		        }
+		        if (i == shapes.length - 1) {
+		            lastSortedValue = shapes[i];
+		        }
+		    }
+		 System.out.println("First sorted value: " + firstSortedValue);
+		 System.out.println("Last sorted value: " + lastSortedValue);
+		 
+		 // Print every thousandth value in between
+		 for (int i = 0; i < shapes.length; i += 1000) {
+		        System.out.println("Value at index " + i + ": " + shapes[i]);
+		 }
+
 	}
 
 }
