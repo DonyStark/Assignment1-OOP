@@ -24,13 +24,4 @@ public class Cone extends Shape3D {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	@Override
-	public String toString( ) {
-		return "Cone [Height: " + height + ", Radius: " + radius + ", Base Area: " + getBaseArea() + ", Volume: " + getVolume() + "]";    
-	}
 }
-
-
-
-
