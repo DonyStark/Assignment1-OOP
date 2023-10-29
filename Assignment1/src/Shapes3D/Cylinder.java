@@ -27,6 +27,9 @@ public class Cylinder extends Shape3D {
 			// TODO Auto-generated method stub
 			return 0;
 		}
-	
+		@Override
+		public String toString() {
+			return "Cylinder [Height: " + height + "Radius: " + radius + "]";
+		}
 
 }
