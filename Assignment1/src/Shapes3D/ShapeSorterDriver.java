@@ -50,7 +50,18 @@ public class ShapeSorterDriver {
 		case "b":
 			SortingUtility.bubbleSort(shapes, comparator);
 			break;
-		// ... you can fill in other cases for other sorting methods
+		case "i":
+			SortingUtility.insertionSort(shapes, comparator);
+			break;
+		case "s":
+			SortingUtility.selectionSort(shapes, comparator);
+			break;
+		case "m":
+			SortingUtility.mergeSort(shapes, comparator);
+			break;
+		case "q":
+			SortingUtility.quickSort(shapes, comparator);
+			break;
 		default:
 			displayUsage();
 			return;
