@@ -131,7 +131,18 @@ public class SortingUtility {
 		mergeSortHelper(shapes, comparator, 0, shapes.length - 1);
 	}
 
+	/**
+	 * Helper method for the Merge Sort algorithm to recursively divide and merge
+	 * the array of 3D shapes.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 * @param left       The left index of the subarray.
+	 * @param right      The right index of the subarray.
+	 */
 	private static void mergeSortHelper(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator, int left,
+			// Merge Sort helper method to divide and merge the 3D shapes array.
+
 			int right) {
 		if (left < right) {
 			int mid = (left + right) / 2;
@@ -143,7 +154,18 @@ public class SortingUtility {
 		}
 	}
 
+	/**
+	 * Merges two subarrays of 3D shapes during the Merge Sort algorithm.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 * @param left       The left index of the subarray.
+	 * @param mid        The middle index of the subarray.
+	 * @param right      The right index of the subarray.
+	 */
 	private static void merge(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator, int left, int mid,
+			// Merge two subarrays of 3D shapes during Merge Sort.
+
 			int right) {
 		int n1 = mid - left + 1;
 		int n2 = right - mid;
@@ -206,7 +228,17 @@ public class SortingUtility {
 		quickSortHelper(shapes, comparator, 0, shapes.length - 1);
 	}
 
+	/**
+	 * Helper method for the Quick Sort algorithm to recursively partition and sort
+	 * the array of 3D shapes.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 * @param low        The lowest index of the subarray.
+	 * @param high       The highest index of the subarray.
+	 */
 	private static void quickSortHelper(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator, int low, int high) {
+		// Quick Sort helper method to partition and sort the 3D shapes array.
 		if (low < high) {
 			int pivotIndex = partition(shapes, comparator, low, high);
 
@@ -215,7 +247,17 @@ public class SortingUtility {
 		}
 	}
 
+	/**
+	 * Partitions the array of 3D shapes during the Quick Sort algorithm.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 * @param low        The lowest index of the subarray.
+	 * @param high       The highest index of the subarray.
+	 * @return The index of the pivot element after partitioning.
+	 */
 	private static int partition(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator, int low, int high) {
+		// Partition the 3D shapes array during Quick Sort and return the pivot index.
 		Shape3D pivot = shapes[high];
 		int i = low - 1;
 
@@ -273,7 +315,18 @@ public class SortingUtility {
 		}
 	}
 
+	/**
+	 * Heapifies a subarray of 3D shapes during the Heap Sort algorithm to maintain
+	 * the max heap property.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param n          The size of the subarray.
+	 * @param root       The root index of the subarray.
+	 * @param comparator The comparator used to determine the sorting order.
+	 */
 	private static void heapify(Shape3D[] shapes, int n, int root, java.util.Comparator<Shape3D> comparator) {
+		// Heapify a subarray of 3D shapes to maintain the max heap property in Heap
+		// Sort.
 		int largest = root;
 		int leftChild = 2 * root + 1;
 		int rightChild = 2 * root + 2;

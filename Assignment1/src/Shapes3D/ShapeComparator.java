@@ -7,6 +7,7 @@ import java.util.Comparator;
  */
 public class ShapeComparator implements Comparator<Shape3D> {
 
+	/** The sorting algorithm to be used */
 	private String strategy;
 
 	/**
