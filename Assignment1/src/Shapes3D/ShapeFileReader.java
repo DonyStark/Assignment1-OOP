@@ -2,9 +2,18 @@ package Shapes3D;
 
 import java.io.*;
 
+/**
+ * A utility class for reading 3D shapes from a text file.
+ */
 public class ShapeFileReader {
+
 	/**
-	 * Provides functionality to read shapes from a text file.
+	 * Reads 3D shapes from a text file and returns an array of Shape3D objects.
+	 *
+	 * @param fileName The name of the text file to read from.
+	 * @return An array of Shape3D objects representing the 3D shapes read from the
+	 *         file, or null in case of errors.
+	 * @throws IOException if there is an error reading the file.
 	 */
 	public static Shape3D[] readShapesFromFile(String fileName) throws IOException {
 		Shape3D[] shapes = null;

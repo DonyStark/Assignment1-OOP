@@ -7,8 +7,16 @@ import java.io.IOException;
  */
 public class ShapeSorterDriver {
 
+	/**
+	 * The main method for sorting and comparing 3D shapes.
+	 *
+	 * @param args Command-line arguments specifying the input file, sort type, and
+	 *             sort order.
+	 * @throws IOException if there is an error reading the input file.
+	 */
 	public static void main(String[] args) throws IOException {
-		long startTime = System.currentTimeMillis();// record end time
+		// Record the start time for performance measurement
+		long startTime = System.currentTimeMillis();
 
 		if (args.length != 3) {
 			displayUsage();
@@ -72,17 +80,27 @@ public class ShapeSorterDriver {
 			displayUsage();
 			return;
 		}
-		long endTime = System.currentTimeMillis();// record end time
+
+		// Record the end time for performance measurement
+		long endTime = System.currentTimeMillis();
 		Long elapsedTime = endTime - startTime;
 
 		displaySortedShapes(shapes);
 		System.out.println("Sorting time: " + elapsedTime + " milliseconds");
 	}
 
+	/**
+	 * Displays the usage instructions for the program.
+	 */
 	private static void displayUsage() {
 		System.out.println("Usage: java -jar sort.jar -f<filename> -t<v/h/a> -s<b/s/i/m/q/z>");
 	}
 
+	/**
+	 * Displays the sorted 3D shapes and additional information.
+	 *
+	 * @param shapes An array of sorted 3D shapes.
+	 */
 	private static void displaySortedShapes(Shape3D[] shapes) {
 		System.out.println("Sorted Shapes:");
 		Shape3D firstSortedValue = null;
@@ -106,7 +124,5 @@ public class ShapeSorterDriver {
 		for (int i = 0; i < shapes.length; i += 1000) {
 			System.out.println("Value at index " + i + ": " + shapes[i]);
 		}
-
 	}
-
 }

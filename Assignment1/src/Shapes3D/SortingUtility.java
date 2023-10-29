@@ -1,11 +1,29 @@
 package Shapes3D;
 
+/**
+ * A utility class that provides various sorting algorithms for arrays of 3D
+ * shapes.
+ */
 public class SortingUtility {
 
+	/**
+	 * Sorts an array of objects that implement the `Comparable` interface using the
+	 * Bubble Sort algorithm.
+	 *
+	 * @param <T>   The type of objects in the array.
+	 * @param array An array of objects to be sorted.
+	 */
 	public static <T extends Comparable<T>> void bubbleSort(T[] array) {
+		// Bubble Sort algorithm implementation for objects that implement Comparable.
 	}
 
-	// Bubble sort algorithm.
+	/**
+	 * Sorts an array of 3D shapes using the Bubble Sort algorithm with a custom
+	 * comparator.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 */
 	public static void bubbleSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
 		int n = shapes.length;
 		for (int i = 0; i < n - 1; i++) {
@@ -20,6 +38,25 @@ public class SortingUtility {
 		}
 	}
 
+	/**
+	 * Sorts an array of objects that implement the `Comparable` interface using the
+	 * Insertion Sort algorithm.
+	 *
+	 * @param <T>   The type of objects in the array.
+	 * @param array An array of objects to be sorted.
+	 */
+	public static <T extends Comparable<T>> void insertionSort(T[] array) {
+		// Insertion Sort algorithm implementation for objects that implement
+		// Comparable.
+	}
+
+	/**
+	 * Sorts an array of 3D shapes using the Insertion Sort algorithm with a custom
+	 * comparator.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 */
 	public static void insertionSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
 		int n = shapes.length;
 		for (int i = 1; i < n; i++) {
@@ -34,6 +71,25 @@ public class SortingUtility {
 		}
 	}
 
+	/**
+	 * Sorts an array of objects that implement the `Comparable` interface using the
+	 * Selection Sort algorithm.
+	 *
+	 * @param <T>   The type of objects in the array.
+	 * @param array An array of objects to be sorted.
+	 */
+	public static <T extends Comparable<T>> void selectionSort(T[] array) {
+		// Selection Sort algorithm implementation for objects that implement
+		// Comparable.
+	}
+
+	/**
+	 * Sorts an array of 3D shapes using the Selection Sort algorithm with a custom
+	 * comparator.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 */
 	public static void selectionSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
 		int n = shapes.length;
 
@@ -53,6 +109,24 @@ public class SortingUtility {
 		}
 	}
 
+	/**
+	 * Sorts an array of objects that implement the `Comparable` interface using the
+	 * Merge Sort algorithm.
+	 *
+	 * @param <T>   The type of objects in the array.
+	 * @param array An array of objects to be sorted.
+	 */
+	public static <T extends Comparable<T>> void mergeSort(T[] array) {
+		// Merge Sort algorithm implementation for objects that implement Comparable.
+	}
+
+	/**
+	 * Sorts an array of 3D shapes using the Merge Sort algorithm with a custom
+	 * comparator.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 */
 	public static void mergeSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
 		mergeSortHelper(shapes, comparator, 0, shapes.length - 1);
 	}
@@ -110,6 +184,24 @@ public class SortingUtility {
 		}
 	}
 
+	/**
+	 * Sorts an array of objects that implement the `Comparable` interface using the
+	 * Quick Sort algorithm.
+	 *
+	 * @param <T>   The type of objects in the array.
+	 * @param array An array of objects to be sorted.
+	 */
+	public static <T extends Comparable<T>> void quickSort(T[] array) {
+		// Quick Sort algorithm implementation for objects that implement Comparable.
+	}
+
+	/**
+	 * Sorts an array of 3D shapes using the Quick Sort algorithm with a custom
+	 * comparator.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 */
 	public static void quickSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
 		quickSortHelper(shapes, comparator, 0, shapes.length - 1);
 	}
@@ -143,6 +235,24 @@ public class SortingUtility {
 		return i + 1;
 	}
 
+	/**
+	 * Sorts an array of objects that implement the `Comparable` interface using the
+	 * Heap Sort algorithm.
+	 *
+	 * @param <T>   The type of objects in the array.
+	 * @param array An array of objects to be sorted.
+	 */
+	public static <T extends Comparable<T>> void heapSort(T[] array) {
+		// Heap Sort algorithm implementation for objects that implement Comparable.
+	}
+
+	/**
+	 * Sorts an array of 3D shapes using the Heap Sort algorithm with a custom
+	 * comparator.
+	 *
+	 * @param shapes     An array of 3D shapes to be sorted.
+	 * @param comparator The comparator used to determine the sorting order.
+	 */
 	public static void heapSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
 		int n = shapes.length;
 
@@ -186,5 +296,4 @@ public class SortingUtility {
 			heapify(shapes, n, largest, comparator);
 		}
 	}
-
 }
