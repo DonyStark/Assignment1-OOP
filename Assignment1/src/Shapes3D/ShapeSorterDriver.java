@@ -22,7 +22,8 @@ public class ShapeSorterDriver {
 		for (int i = 0; i < args.length; i++) {
 			String currentArg = args[i].toLowerCase();
 			String option = currentArg.substring(0, 2);
-			String value = currentArg.substring(2);
+			String temp = currentArg.substring(2);
+			String value = temp.replaceAll("\"", "");
 
 			switch (option) {
 			case "-f":
@@ -64,7 +65,7 @@ public class ShapeSorterDriver {
 		case "q":
 			SortingUtility.quickSort(shapes, comparator);
 			break;
-		case "h":
+		case "z":
 			SortingUtility.heapSort(shapes, comparator);
 			break;
 		default:
@@ -79,7 +80,7 @@ public class ShapeSorterDriver {
 	}
 
 	private static void displayUsage() {
-		System.out.println("Usage: java -jar sort.jar -f<filename> -t<v/h/a> -s<b/s/i/m/q/h>");
+		System.out.println("Usage: java -jar sort.jar -f<filename> -t<v/h/a> -s<b/s/i/m/q/z>");
 	}
 
 	private static void displaySortedShapes(Shape3D[] shapes) {
