@@ -143,8 +143,48 @@ public class SortingUtility {
 		return i + 1;
 	}
 
-	public static void radixSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
+	public static void heapSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
+		int n = shapes.length;
 
+		// Build a max heap
+		for (int i = n / 2 - 1; i >= 0; i--) {
+			heapify(shapes, n, i, comparator);
+		}
+
+		// Extract elements from the heap one by one
+		for (int i = n - 1; i > 0; i--) {
+			// Swap the root (maximum element) with the last element
+			Shape3D temp = shapes[0];
+			shapes[0] = shapes[i];
+			shapes[i] = temp;
+
+			// Call max heapify on the reduced heap
+			heapify(shapes, i, 0, comparator);
+		}
+	}
+
+	private static void heapify(Shape3D[] shapes, int n, int root, java.util.Comparator<Shape3D> comparator) {
+		int largest = root;
+		int leftChild = 2 * root + 1;
+		int rightChild = 2 * root + 2;
+
+		if (leftChild < n && comparator.compare(shapes[leftChild], shapes[largest]) > 0) {
+			largest = leftChild;
+		}
+
+		if (rightChild < n && comparator.compare(shapes[rightChild], shapes[largest]) > 0) {
+			largest = rightChild;
+		}
+
+		if (largest != root) {
+			// Swap the largest element with the root
+			Shape3D temp = shapes[root];
+			shapes[root] = shapes[largest];
+			shapes[largest] = temp;
+
+			// Recursively heapify the affected sub-tree
+			heapify(shapes, n, largest, comparator);
+		}
 	}
 
 }
