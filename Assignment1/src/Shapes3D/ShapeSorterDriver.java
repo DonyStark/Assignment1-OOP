@@ -64,6 +64,8 @@ public class ShapeSorterDriver {
 		case "q":
 			SortingUtility.quickSort(shapes, comparator);
 			break;
+		case "r": 
+			SortingUtility.radixSort(shapes, comparator);
 		default:
 			displayUsage();
 			return;
@@ -76,7 +78,7 @@ public class ShapeSorterDriver {
 	}
 
 	private static void displayUsage() {
-		System.out.println("Usage: java -jar sort.jar -f<filename> -t<v/h/a> -s<b/s/i/m/q/z>");
+		System.out.println("Usage: java -jar sort.jar -f<filename> -t<v/h/a> -s<b/s/i/m/q/r>");
 	}
 
 	private static void displaySortedShapes(Shape3D[] shapes) {

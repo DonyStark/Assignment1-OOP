@@ -21,7 +21,17 @@ public class SortingUtility {
 	}
 
 	public static void insertionSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
+		int n = shapes.length;
+	    for (int i = 1; i < n; i++) {
+	        Shape3D key = shapes[i];
+	        int j = i - 1;
 
+	        while (j >= 0 && comparator.compare(shapes[j], key) > 0) {
+	            shapes[j + 1] = shapes[j];
+	            j = j - 1;
+	        }
+	        shapes[j + 1] = key;
+	    }
 	}
 
 	public static void selectionSort(Shape3D[] shapes, java.util.Comparator<Shape3D> comparator) {
