@@ -6,6 +6,9 @@ package Shapes3D;
  */
 public class SquarePrism extends Shape3D {
     
+	/**
+	 * Edge length of the prism 
+	 */
     private double edgeLength;
 
     

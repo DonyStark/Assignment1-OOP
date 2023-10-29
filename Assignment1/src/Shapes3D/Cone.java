@@ -6,6 +6,9 @@ package Shapes3D;
 
 public class Cone extends Shape3D {
     
+	/**
+	 * Radius of the cone 
+	 */
     private double radius;
     
     /**

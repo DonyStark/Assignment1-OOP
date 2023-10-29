@@ -7,6 +7,10 @@ package Shapes3D;
  */
 public class OctagonalPrism extends Shape3D {
     
+	
+	/**
+	 * Edge length of the Octogonal prism 
+	 */
     private double edgeLength;
 
     

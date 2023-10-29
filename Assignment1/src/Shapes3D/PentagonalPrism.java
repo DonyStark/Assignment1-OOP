@@ -6,6 +6,10 @@ package Shapes3D;
  */
 public class PentagonalPrism extends Shape3D {
     
+	
+	/**
+	 * Edge length of the pentagonal prism  
+	 */
     private double edgeLength;
 
     

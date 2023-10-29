@@ -6,6 +6,10 @@ package Shapes3D;
  */
 public class TriangularPrism extends Shape3D {
     
+	
+	/**
+	 * Edge length of the triangularPrism 
+	 */
     private double edgeLength;
 
     

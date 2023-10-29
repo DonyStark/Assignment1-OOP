@@ -4,7 +4,9 @@ package Shapes3D;
  */
 public class Cylinder extends Shape3D {
 
-	
+	/**
+	 * Radius of Cylinder  
+	 */
 	 private double radius;
 	 
 	 /**

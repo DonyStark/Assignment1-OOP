@@ -6,6 +6,10 @@ package Shapes3D;
  */
 public class Pyramid extends Shape3D {
     
+	
+	/**
+	 * Edge length of the pyramid 
+	 */
     private double edgeLength;
 
     
