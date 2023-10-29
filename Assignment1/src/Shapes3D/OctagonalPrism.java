@@ -28,10 +28,9 @@ public class OctagonalPrism extends Shape3D {
 
     
     /**
-     * Constructs an `OctagonalPrism` object with the given height and edge length.
+     * Calculates and returns the volume of the octagonalPrism.
      *
-     * @param height The height of the octagonal prism.
-     * @param edgeLength The length of one edge of the octagon.
+     * @return The volume of the octagonalPrism.
      */
     @Override
     public double getVolume() {

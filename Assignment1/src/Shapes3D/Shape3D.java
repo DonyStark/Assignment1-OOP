@@ -5,6 +5,10 @@ package Shapes3D;
 
 	public abstract class Shape3D implements Comparable<Shape3D> {
 	    
+		
+		/**
+		 * Height of shapes 
+		 */
 	    protected double height;
 
 	    /**

@@ -24,10 +24,9 @@ public class Cone extends Shape3D {
     
     
     /**
-     * Constructs a `Cone` object with the given height and radius.
+     * Calculates and returns the volume of the cone.
      *
-     * @param height The height of the cone.
-     * @param radius The radius of the base of the cone.
+     * @return The volume of the cone.
      */
     @Override
     public double getVolume() {
