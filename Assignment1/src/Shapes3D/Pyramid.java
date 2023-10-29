@@ -24,4 +24,8 @@ public class Pyramid extends Shape3D {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	@Override
+	public String toString() {
+	    return "Pyramid [Height: " + height + ", Edge Length: " + edgeLength + ", Base Area: " + getBaseArea() + ", Volume: " + getVolume() + "]";
+	}
 }

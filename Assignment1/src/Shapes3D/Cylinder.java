@@ -29,7 +29,7 @@ public class Cylinder extends Shape3D {
 		}
 		@Override
 		public String toString() {
-			return "Cylinder [Height: " + height + "Radius: " + radius + "]";
+			return "Cylinder [Height: " + height + ", Radius: " + radius + "]";
 		}
 
 }

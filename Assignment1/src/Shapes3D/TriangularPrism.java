@@ -25,4 +25,9 @@ public class TriangularPrism extends Shape3D {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	@Override
+	public String toString() {
+	    return "TriangularPrism [Height: " + height + ", Edge Length: " + edgeLength + ", Base Area: " + getBaseArea() + ", Volume: " + getVolume() + "]";
+	}
 }

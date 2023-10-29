@@ -25,4 +25,11 @@ public class PentagonalPrism extends Shape3D {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	@Override
+	public String toString() {
+	    return "PentagonalPrism [Edge Length: " + edgeLength + ", Height: " + height + ", Base Area: " + getBaseArea() + ", Volume: " + getVolume() + "]";
+	}
+	
+	
 }
